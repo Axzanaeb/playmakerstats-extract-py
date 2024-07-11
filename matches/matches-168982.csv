@@ -1,0 +1,157 @@
+teamA,teamB,result,matchDate
+UCD Moure,Gondar,1-1,2022/10/08
+Freixo de Baixo,ACR Gatão,1-2,2022/10/08
+ARCA (Amarante),GCDR Estrelas da Paz,2-2,2022/10/08
+GD Cepelos,ACD Madalena,3-0,2022/10/08
+GDR Travanca,Sanche FC,6-0,2022/10/08
+AD Figueiró,Padronelo,3-3,2022/10/08
+Gondar,ARCA (Amarante),2-1,2022/10/15
+ACR Gatão,UCD Moure,0-0,2022/10/15
+GCDR Estrelas da Paz,GD Cepelos,2-2,2022/10/15
+ACD Madalena,GDR Travanca,2-5,2022/10/15
+Sanche FC,Mancelos FC,1-0,2022/10/15
+Padronelo,Freixo de Baixo,2-0,2022/10/15
+ARCA (Amarante),ACR Gatão,2-2,2022/10/23
+Freixo de Baixo,UCD Moure,2-3,2022/10/23
+GD Cepelos,Gondar,4-0,2022/10/23
+GDR Travanca,GCDR Estrelas da Paz,2-2,2022/10/23
+Mancelos FC,ACD Madalena,1-0,2022/10/23
+AD Figueiró,Sanche FC,2-1,2022/10/23
+ACR Gatão,GD Cepelos,3-2,2022/10/30
+UCD Moure,ARCA (Amarante),0-0,2022/10/30
+Gondar,GDR Travanca,2-2,2022/10/30
+GCDR Estrelas da Paz,Mancelos FC,1-4,2022/10/30
+ACD Madalena,AD Figueiró,0-1,2022/10/30
+Sanche FC,Padronelo,3-3,2022/10/30
+GD Cepelos,UCD Moure,2-1,2022/11/05
+Freixo de Baixo,ARCA (Amarante),2-2,2022/11/05
+GDR Travanca,ACR Gatão,0-0,2022/11/05
+Mancelos FC,Gondar,2-1,2022/11/05
+AD Figueiró,GCDR Estrelas da Paz,2-0,2022/11/05
+Padronelo,ACD Madalena,7-3,2022/11/05
+UCD Moure,GDR Travanca,1-2,2022/11/12
+ARCA (Amarante),GD Cepelos,3-1,2022/11/12
+ACR Gatão,Mancelos FC,4-2,2022/11/12
+Gondar,AD Figueiró,DA,2022/11/12
+GCDR Estrelas da Paz,Padronelo,2-0,2022/11/12
+Sanche FC,Freixo de Baixo,0-4,2022/11/12
+GDR Travanca,ARCA (Amarante),2-1,2022/11/20
+Freixo de Baixo,GD Cepelos,1-3,2022/11/20
+Mancelos FC,UCD Moure,3-0,2022/11/20
+AD Figueiró,ACR Gatão,1-1,2022/11/20
+Padronelo,Gondar,1-1,2022/11/20
+Sanche FC,ACD Madalena,4-4,2022/11/20
+UCD Moure,AD Figueiró,5-2,2022/12/04
+ARCA (Amarante),Mancelos FC,4-7,2022/12/04
+ACR Gatão,Padronelo,4-3,2022/12/04
+GCDR Estrelas da Paz,Sanche FC,2-1,2022/12/04
+ACD Madalena,Freixo de Baixo,1-1,2022/12/04
+GD Cepelos,GDR Travanca,1-1,2022/12/04
+Sanche FC,Gondar,1-1,2022/12/08
+Freixo de Baixo,GDR Travanca,0-0,2022/12/08
+Mancelos FC,GD Cepelos,3-1,2022/12/08
+AD Figueiró,ARCA (Amarante),3-2,2022/12/08
+Padronelo,UCD Moure,0-0,2022/12/08
+ACD Madalena,GCDR Estrelas da Paz,1-2,2022/12/08
+GD Cepelos,AD Figueiró,3-1,2023/01/08
+GDR Travanca,Mancelos FC,1-1,2023/01/08
+ARCA (Amarante),Padronelo,2-1,2023/01/08
+ACR Gatão,Sanche FC,5-0,2023/01/08
+Gondar,ACD Madalena,3-0,2023/01/08
+GCDR Estrelas da Paz,Freixo de Baixo,3-2,2023/01/08
+AD Figueiró,GDR Travanca,1-2,2023/01/15
+Freixo de Baixo,Mancelos FC,2-2,2023/01/15
+Padronelo,GD Cepelos,0-0,2023/01/15
+Sanche FC,UCD Moure,0-1,2023/01/15
+ACD Madalena,ACR Gatão,1-2,2023/01/15
+GCDR Estrelas da Paz,Gondar,2-1,2023/01/15
+GDR Travanca,Padronelo,1-2,2023/01/21
+Mancelos FC,AD Figueiró,2-1,2023/01/21
+ARCA (Amarante),Sanche FC,3-1,2023/01/21
+UCD Moure,ACD Madalena,4-4,2023/01/21
+ACR Gatão,GCDR Estrelas da Paz,1-1,2023/01/21
+Freixo de Baixo,Gondar,4-1,2023/01/21
+Padronelo,Mancelos FC,3-2,2023/01/28
+AD Figueiró,Freixo de Baixo,1-5,2023/01/28
+Sanche FC,GD Cepelos,2-1,2023/01/28
+ACD Madalena,ARCA (Amarante),1-1,2023/01/28
+GCDR Estrelas da Paz,UCD Moure,2-1,2023/01/28
+Gondar,ACR Gatão,0-2,2023/01/28
+Gondar,UCD Moure,0-1,2023/02/04
+ACR Gatão,Freixo de Baixo,4-2,2023/02/04
+GCDR Estrelas da Paz,ARCA (Amarante),3-0,2023/02/04
+ACD Madalena,GD Cepelos,1-2,2023/02/04
+Sanche FC,GDR Travanca,1-2,2023/02/04
+Padronelo,AD Figueiró,1-0,2023/02/04
+GD Cepelos,GCDR Estrelas da Paz,1-2,2023/02/11
+UCD Moure,ACR Gatão,1-3,2023/02/11
+ARCA (Amarante),Gondar,0-1,2023/02/11
+GDR Travanca,ACD Madalena,3-1,2023/02/11
+Mancelos FC,Sanche FC,5-1,2023/02/11
+Freixo de Baixo,Padronelo,4-1,2023/02/11
+ACR Gatão,ARCA (Amarante),1-1,2023/02/19
+UCD Moure,Freixo de Baixo,1-1,2023/02/19
+Gondar,GD Cepelos,1-0,2023/02/19
+GCDR Estrelas da Paz,GDR Travanca,2-2,2023/02/19
+ACD Madalena,Mancelos FC,0-0,2023/02/19
+Sanche FC,AD Figueiró,2-4,2023/02/19
+GD Cepelos,ACR Gatão,0-2,2023/02/25
+ARCA (Amarante),UCD Moure,2-1,2023/02/25
+GDR Travanca,Gondar,3-0,2023/02/25
+Mancelos FC,GCDR Estrelas da Paz,1-1,2023/02/25
+AD Figueiró,ACD Madalena,2-3,2023/02/25
+Padronelo,Sanche FC,1-1,2023/02/25
+UCD Moure,GD Cepelos,1-1,2023/03/04
+ARCA (Amarante),Freixo de Baixo,2-3,2023/03/04
+ACR Gatão,GDR Travanca,4-2,2023/03/04
+Gondar,Mancelos FC,3-0,2023/03/04
+GCDR Estrelas da Paz,AD Figueiró,1-0,2023/03/04
+ACD Madalena,Padronelo,3-2,2023/03/04
+GDR Travanca,UCD Moure,4-4,2023/03/12
+GD Cepelos,ARCA (Amarante),4-2,2023/03/12
+Mancelos FC,ACR Gatão,0-0,2023/03/12
+AD Figueiró,Gondar,0-5,2023/03/12
+Padronelo,GCDR Estrelas da Paz,1-0,2023/03/12
+Freixo de Baixo,Sanche FC,2-0,2023/03/12
+GD Cepelos,Freixo de Baixo,3-1,2023/03/25
+ARCA (Amarante),GDR Travanca,2-5,2023/03/25
+UCD Moure,Mancelos FC,1-1,2023/03/25
+ACR Gatão,AD Figueiró,2-2,2023/03/25
+Gondar,Padronelo,0-2,2023/03/25
+ACD Madalena,Sanche FC,1-2,2023/03/25
+Mancelos FC,ARCA (Amarante),2-0,2023/04/01
+GDR Travanca,GD Cepelos,1-0,2023/04/01
+AD Figueiró,UCD Moure,1-3,2023/04/01
+Padronelo,ACR Gatão,0-3,2023/04/01
+Freixo de Baixo,ACD Madalena,1-1,2023/04/01
+Sanche FC,GCDR Estrelas da Paz,1-2,2023/04/01
+GD Cepelos,Mancelos FC,0-0,2023/04/15
+GDR Travanca,Freixo de Baixo,2-2,2023/04/15
+ARCA (Amarante),AD Figueiró,2-4,2023/04/15
+UCD Moure,Padronelo,1-0,2023/04/15
+Gondar,Sanche FC,0-1,2023/04/15
+GCDR Estrelas da Paz,ACD Madalena,2-1,2023/04/15
+Freixo de Baixo,GCDR Estrelas da Paz,4-0,2023/04/22
+Sanche FC,ACR Gatão,0-4,2023/04/22
+Mancelos FC,GDR Travanca,1-2,2023/04/22
+AD Figueiró,GD Cepelos,1-2,2023/04/22
+Padronelo,ARCA (Amarante),2-2,2023/04/22
+ACD Madalena,Gondar,0-1,2023/04/22
+GDR Travanca,AD Figueiró,2-1,2023/04/30
+Mancelos FC,Freixo de Baixo,2-0,2023/04/30
+GD Cepelos,Padronelo,0-0,2023/04/30
+UCD Moure,Sanche FC,1-2,2023/04/30
+ACR Gatão,ACD Madalena,7-1,2023/04/30
+Gondar,GCDR Estrelas da Paz,0-1,2023/04/30
+Padronelo,GDR Travanca,0-1,2023/05/06
+AD Figueiró,Mancelos FC,2-3,2023/05/06
+Sanche FC,ARCA (Amarante),1-2,2023/05/06
+ACD Madalena,UCD Moure,0-3,2023/05/06
+GCDR Estrelas da Paz,ACR Gatão,0-0,2023/05/06
+Gondar,Freixo de Baixo,0-0,2023/05/06
+Mancelos FC,Padronelo,3-4,2023/05/20
+Freixo de Baixo,AD Figueiró,3-4,2023/05/20
+GD Cepelos,Sanche FC,3-3,2023/05/20
+ARCA (Amarante),ACD Madalena,4-0,2023/05/20
+UCD Moure,GCDR Estrelas da Paz,1-1,2023/05/20
+ACR Gatão,Gondar,2-1,2023/05/20
