@@ -1,8 +1,7 @@
-import os
-import csv
-import chromedriver_autoinstaller
+import os, sys, csv, chromedriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from match import Match
@@ -10,12 +9,10 @@ from match import Match
 def extract_games(driver, url):
     try:
         driver.get(url)
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.ID, "fixture_games")))
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "fixture_games")))
         fixture_games_div = driver.find_element(By.ID, "fixture_games")
         game_rows = fixture_games_div.find_elements(By.TAG_NAME, 'tr')
-        season_year_element = driver.find_element(
-            By.XPATH, "//div[@class='text']/a[contains(text(), 'AFP Amarante')]")
+        season_year_element = driver.find_element(By.XPATH, "//div[@class='text']/a[contains(text(), 'AFP Amarante')]")
         season_year_text = season_year_element.get_attribute('innerText')
         season_year = season_year_text.split()[-1]
 
@@ -23,26 +20,24 @@ def extract_games(driver, url):
         date = None
         for row in game_rows:
             columns = row.find_elements(By.TAG_NAME, "td")
-            date = columns[0].get_attribute(
-                'innerText').strip().split("/") if not date else date
+            date = columns[0].get_attribute('innerText').strip().split("/") if not date else date
             team_a = columns[1].get_attribute('innerText').strip()
             team_b = columns[5].get_attribute('innerText').strip()
             result = columns[3].get_attribute('innerText').strip()
 
             if int(date[1]) < 7:
-                match = Match(team_a, team_b, result, f"20{
-                              season_year[-2:]}/{date[1]}/{date[0]}")
+                match = Match(team_a, team_b, result, f"20{season_year[-2:]}/{date[1]}/{date[0]}")
             else:
-                match = Match(team_a, team_b, result, f"20{
-                              season_year[:-3]}/{date[1]}/{date[0]}")
+                match = Match(team_a, team_b, result, f"20{season_year[:-3]}/{date[1]}/{date[0]}")
 
             matches.append(match)
 
         return matches
-    except Exception as e:
-        print(f"Error extracting games: {e}")
-        return []
+    except NoSuchElementException as e: 
+        print('Extracting limit exceeded.')
+        sys.exit()
 
+class ExtractLimitExceeded(Exception):pass
 
 def group_matches(matches):
     grouped_matches = {}
@@ -73,35 +68,38 @@ def accept_cookies(driver):
 
 
 def extract_seasons(driver):
-    url = f"https://www.playmakerstats.com/edition.php?id={178913}"
-    driver.get(url)
-    seasons = driver.find_element(By.ID, "id_edicao")
+    try:
+        url = f"https://www.playmakerstats.com/edition.php?id={178913}"
+        driver.get(url)
+        seasons = driver.find_element(By.ID, "id_edicao")
 
-    all_seasons = [season.get_attribute(
-        'value') for season in seasons.find_elements(By.CSS_SELECTOR, 'option')]
+        all_seasons = [season.get_attribute('value') for season in seasons.find_elements(By.CSS_SELECTOR, 'option')]
 
-    existing_files = os.listdir('./matches')
+        existing_files = os.listdir('./matches')
 
-    exported_seasons = set()
-    for filename in existing_files:
-        if filename.startswith('matches-') and filename.endswith('.csv'):
-            season = filename[len('matches-'):-len('.csv')]
-            exported_seasons.add(season)
+        exported_seasons = set()
+        for filename in existing_files:
+            if filename.startswith('matches-') and filename.endswith('.csv'):
+                season = filename[len('matches-'):-len('.csv')]
+                exported_seasons.add(season)
 
-    new_seasons = [season for season in all_seasons if season not in exported_seasons]
-
-    return new_seasons
-
+        new_seasons = [season for season in all_seasons if season not in exported_seasons]
+        return new_seasons
+    except NoSuchElementException as e: 
+        print('Extracting limit exceeded.')
+        sys.exit()
 
 def extract_matchweeks(driver, url):
-    driver.get(url)
+    try:
+        driver.get(url)
 
-    element = driver.find_element(
-        By.NAME, "form_edicao").find_element(By.CSS_SELECTOR, 'span')
-    matchweeks = driver.execute_script(
-        "return arguments[0].innerText;", element)
+        element = driver.find_element(By.NAME, "form_edicao").find_element(By.CSS_SELECTOR, 'span')
+        matchweeks = driver.execute_script("return arguments[0].innerText;", element)
 
-    return int(matchweeks.strip().replace('Matchweek', ''))
+        return int(matchweeks.strip().replace('Matchweek', ''))
+    except NoSuchElementException as e: 
+        print('Extracting limit exceeded.')
+        sys.exit()
 
 
 chromedriver_autoinstaller.install()
@@ -138,6 +136,5 @@ for season in extract_seasons(driver):
                 [match.team_a, match.team_b, match.result, match.match_date])
 
     print(f'season({season}) extraction completed')
-
 
 driver.quit()
