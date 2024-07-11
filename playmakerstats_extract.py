@@ -1,14 +1,11 @@
-import os, csv
+import os
+import csv
 import chromedriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from match import Match
-
-USERNAME = 'jorgelopes371'
-PASSWORD = 'Zerozero666!'
-
 
 def extract_games(driver, url):
     try:
@@ -33,9 +30,11 @@ def extract_games(driver, url):
             result = columns[3].get_attribute('innerText').strip()
 
             if int(date[1]) < 7:
-                match = Match(team_a, team_b, result, f"20{season_year[-2:]}/{date[1]}/{date[0]}")
+                match = Match(team_a, team_b, result, f"20{
+                              season_year[-2:]}/{date[1]}/{date[0]}")
             else:
-                match = Match(team_a, team_b, result, f"20{season_year[:-3]}/{date[1]}/{date[0]}")
+                match = Match(team_a, team_b, result, f"20{
+                              season_year[:-3]}/{date[1]}/{date[0]}")
 
             matches.append(match)
 
@@ -81,16 +80,15 @@ def extract_seasons(driver):
     all_seasons = [season.get_attribute(
         'value') for season in seasons.find_elements(By.CSS_SELECTOR, 'option')]
 
-    existing_files = os.listdir('.')
+    existing_files = os.listdir('./matches')
 
     exported_seasons = set()
     for filename in existing_files:
-        if filename.startswith('matches-') and filename.endswith('.json'):
-            season = filename[len('matches-'):-len('.json')]
+        if filename.startswith('matches-') and filename.endswith('.csv'):
+            season = filename[len('matches-'):-len('.csv')]
             exported_seasons.add(season)
 
-    new_seasons = [
-        season for season in all_seasons if season not in exported_seasons]
+    new_seasons = [season for season in all_seasons if season not in exported_seasons]
 
     return new_seasons
 
