@@ -1,11 +1,9 @@
-import os
-import json
+import os, csv
 import chromedriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from odd_calculator import calculate_probabilities, calculate_odds, adjust_for_margin
 from match import Match
 
 USERNAME = 'jorgelopes371'
@@ -35,11 +33,9 @@ def extract_games(driver, url):
             result = columns[3].get_attribute('innerText').strip()
 
             if int(date[1]) < 7:
-                match = Match(team_a, team_b, result, f"20{
-                              season_year[-2:]}/{date[1]}/{date[0]}")
+                match = Match(team_a, team_b, result, f"20{season_year[-2:]}/{date[1]}/{date[0]}")
             else:
-                match = Match(team_a, team_b, result, f"20{
-                              season_year[:-3]}/{date[1]}/{date[0]}")
+                match = Match(team_a, team_b, result, f"20{season_year[:-3]}/{date[1]}/{date[0]}")
 
             matches.append(match)
 
